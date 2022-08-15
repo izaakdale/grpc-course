@@ -1,0 +1,10 @@
+syntax = "proto3";
+package avg;
+option go_package = "github.com/izaakdale/grpc-course";
+
+message AvgRequest {
+    int32 n = 1;
+}
+message AvgResponse {
+    double avg = 1;
+}

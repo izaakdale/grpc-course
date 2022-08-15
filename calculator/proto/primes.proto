@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package primes;
+option go_package = "github.com/izaakdale/grpc-course";
+
+message PrimeRequest {
+    uint32 num = 1;
+}
+
+message PrimeResponse {
+    uint32 prime = 1;
+}

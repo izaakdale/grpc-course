@@ -1,0 +1,17 @@
+syntax = "proto3";
+package calculator;
+option go_package = "github.com/izaakdale/grpc-course";
+
+import "calculator/proto/avg.proto";
+import "calculator/proto/max.proto";
+import "calculator/proto/primes.proto";
+import "calculator/proto/sum.proto";
+import "calculator/proto/sqrt.proto";
+
+service CalculatorService {
+    rpc RequestAverage(stream avg.AvgRequest) returns (avg.AvgResponse);
+    rpc GetMax (stream max.MaxRequest) returns (stream max.MaxReponse);
+    rpc ManyPrimes(primes.PrimeRequest) returns (stream primes.PrimeResponse);
+    rpc Sum(sum.SumRequest) returns (sum.SumResponse);
+    rpc Sqrt(sqrt.SqrtRequest) returns (sqrt.SqrtResponse);
+}

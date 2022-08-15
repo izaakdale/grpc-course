@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package sum;
+
+option go_package = "github.com/izaakdale/grpc-course";
+
+message SumRequest {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message SumResponse {
+    int32 sum = 1;
+}

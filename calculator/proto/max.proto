@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package max;
+option go_package = "github.com/izaakdale/grpc-course";
+
+message MaxRequest {
+    int32 n = 1;
+}
+
+message MaxReponse {
+    int32 max = 1;
+}

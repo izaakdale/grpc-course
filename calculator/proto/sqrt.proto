@@ -1,0 +1,11 @@
+syntax = "proto3";
+package sqrt;
+option go_package = "github.com/izaakdale/grpc-course";
+
+message SqrtRequest {
+    int32 num = 1;
+}
+
+message SqrtResponse {
+    double sqrt = 1;
+}
